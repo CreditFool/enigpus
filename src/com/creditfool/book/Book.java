@@ -17,6 +17,12 @@ public abstract class Book {
         this.id = createId();
     }
 
+    public Book(String id, String title, Integer releaseYear) {
+        this.title = title;
+        this.releaseYear = releaseYear;
+        this.id = id;
+    }
+
     abstract String createId();
 
     public abstract String getTitle();
