@@ -5,6 +5,7 @@ import com.creditfool.book.Magazine;
 import com.creditfool.book.Novel;
 import com.creditfool.book.ReleasePeriod;
 import com.creditfool.inventory.InventoryService;
+import com.creditfool.inventory.InventoryServiceImpl;
 
 import java.util.Scanner;
 import java.util.Set;
@@ -207,6 +208,7 @@ public class Menu {
                 updateMagazine((Magazine) book);
 
             }
+            ((InventoryServiceImpl) inventoryService).saveToCsv();
             displayBook(book);
             System.out.println();
         } while (userInput.getYesOrNoInput("Continue update this book (y/N)? "));

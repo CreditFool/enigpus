@@ -15,7 +15,7 @@ public class Application {
         InventoryService inventoryService = new InventoryServiceImpl();
         Scanner scanner = new Scanner(System.in);
         Menu menu = new Menu(scanner,inventoryService);
-        if (injectData) {
+        if (injectData && inventoryService.getAllBook().isEmpty()) {
             populateinventory(inventoryService);
         }
         menu.mainMenu();
@@ -24,9 +24,9 @@ public class Application {
 
     private static void populateinventory(InventoryService inventoryService) {
         Book novel1 = new Novel("Hyouka", 2018, "Haru", "Yonezawa Honobu");
-        Book novel2 = new Novel("Hyouka", 2018, "Haru", "Yonezawa Honobu");
-        Book magazine1 = new Magazine("IEEE", 2015, ReleasePeriod.MONTHLY);
-        Book magazine2 = new Magazine("Springer", 2018, ReleasePeriod.WEEKLY);
+        Book novel2 = new Novel("Goodbye Fairy", 2010, "Haru", "Yonezawa Honobu");
+        Book magazine1 = new Magazine("Tempo", 2015, ReleasePeriod.MONTHLY);
+        Book magazine2 = new Magazine("Shonen Jump", 2018, ReleasePeriod.WEEKLY);
 
         inventoryService.addBook(novel1);
         inventoryService.addBook(novel2);
