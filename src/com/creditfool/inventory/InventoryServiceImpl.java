@@ -97,6 +97,7 @@ public class InventoryServiceImpl implements InventoryService {
                 }
             }
         } catch (IOException e) {
+            e.getStackTrace();
 
         }
     }

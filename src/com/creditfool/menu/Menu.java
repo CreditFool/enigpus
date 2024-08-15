@@ -157,7 +157,7 @@ public class Menu {
             }
             if (!userInput.getYesOrNoInput("Reinput data (Y/n)? ")){
                 break;
-            };
+            }
         }
         return newNovel;
     }
@@ -186,7 +186,7 @@ public class Menu {
             }
             if (!userInput.getYesOrNoInput("Reinput data (Y/n)? ")){
                 break;
-            };
+            }
         }
         return newMagazine;
     }

@@ -16,13 +16,13 @@ public class Application {
         Scanner scanner = new Scanner(System.in);
         Menu menu = new Menu(scanner,inventoryService);
         if (injectData && inventoryService.getAllBook().isEmpty()) {
-            populateinventory(inventoryService);
+            populateInventory(inventoryService);
         }
         menu.mainMenu();
         scanner.close();
     }
 
-    private static void populateinventory(InventoryService inventoryService) {
+    private static void populateInventory(InventoryService inventoryService) {
         Book novel1 = new Novel("Hyouka", 2018, "Haru", "Yonezawa Honobu");
         Book novel2 = new Novel("Goodbye Fairy", 2010, "Haru", "Yonezawa Honobu");
         Book magazine1 = new Magazine("Tempo", 2015, ReleasePeriod.MONTHLY);
